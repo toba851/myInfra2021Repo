@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "my-s3-bucket" {
   tags=var.tags
 }
 resource "aws_s3_bucket_versioning" "this"{
-  bucket=aws_S3_bucket.my_s3_bucket.id
+  bucket=aws_S3_bucket.my-s3-bucket.id
 
   versioning configuration {
   status=var.versioning? "Enabled" : "Suspended'"
