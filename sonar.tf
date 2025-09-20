@@ -40,9 +40,10 @@ resource "aws_instance" "mySonarInstance" {
     }
 
 # Create Elastic IP address for Sonar instance
-resource "aws_eip" "mySonarInstance" 
+resource "aws_eip" "mySonarInstance" {
   instance = aws_instance.mySonarInstance.id
-tags= {
+
+  tags= {
     Name = "sonar_elastic_ip"
   }
 }
